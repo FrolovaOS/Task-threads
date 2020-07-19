@@ -1,21 +1,22 @@
 package task1;
 
+import java.util.ArrayList;
+import java.util.List;
 
 public class Card {
 
-    private StringBuffer name;
+    private List<String> guests;
     private int count;
 
     public Card()
     {
-        name = new StringBuffer();
+        guests = new ArrayList<String>();
         count = 0;
     }
 
     public void setName(String nameGuests)
     {
-        name.append(nameGuests);
-        name.append(" ");
+        guests.add(nameGuests);
         count++;
     }
 
@@ -27,11 +28,12 @@ public class Card {
     public void clear()
     {
         count = 0;
-        name.delete(0, name.length());
+        guests.clear();
     }
 
     public void display()
     {
-        System.out.println(name.toString());
+        for(String name: guests)
+        System.out.print(name.toString() + " ");
     }
 }

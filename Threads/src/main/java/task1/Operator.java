@@ -8,9 +8,9 @@ public class Operator implements Runnable{
     private int countGuests = 100;
     private Card card;
 
-    public Operator(Card _card)
+    public Operator(Card card)
     {
-        this.card = _card;
+        this.card = card;
     }
 
     @Override
